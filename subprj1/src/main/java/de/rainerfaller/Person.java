@@ -15,4 +15,9 @@ public class Person {
     public String toString() {
         return "Person{name='" + name + "', birthdate=" + birthdate + "}";
     }
+
+    // calculate age
+    public int getAge() {
+        return java.time.Period.between(birthdate, java.time.LocalDate.now()).getYears();
+    }
 }
